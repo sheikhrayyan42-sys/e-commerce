@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identity Seamless Leggings - The Iron Gear</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        :root {
+            --primary-blue: #2563eb;
+            --primary-blue-hover: #1d4ed8;
+            --text-color: #1f2937;
+            --background-white: #ffffff;
+            --card-bg: #f3f4f6;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-white);
+            color: var(--text-color);
+        }
+
+        /* General button and element transitions */
+        .btn-primary, .size-btn, .color-btn, .thumbnail-image {
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-blue-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Size and Color button styles */
+        .size-btn, .color-btn {
+            border: 2px solid #d1d5db;
+            color: #4b5563;
+        }
+        
+        .size-btn:hover, .color-btn:hover {
+            border-color: var(--primary-blue-hover);
+        }
+        
+        .size-btn.active, .color-btn.active {
+            border-color: var(--primary-blue);
+            background-color: var(--primary-blue);
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .thumbnail-image:hover {
+            transform: scale(1.05);
+            border: 2px solid var(--primary-blue);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600">The Iron Gear</a>
+            <nav class="flex space-x-4">
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Shop</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">About</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Cart</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content - Product Details -->
+    <main class="container mx-auto p-4 md:p-8 mt-4">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Product Images Section -->
+            <div class="lg:w-1/2">
+                <div class="bg-white rounded-xl shadow-lg p-4">
+                    <!-- Main Product Image -->
+                    <img id="main-image" src="https://placehold.co/800x800/D1D5DB/1F2937?text=Identity+Leggings" alt="Identity Seamless Leggings" class="w-full h-auto object-cover rounded-lg mb-4 shadow-md">
+                    
+                    <!-- Thumbnail Gallery -->
+                    <div class="flex space-x-2 overflow-x-auto">
+                        <img src="https://placehold.co/150x150/E5E7EB/1F2937?text=Front" alt="Front view" class="thumbnail-image w-20 h-20 rounded-lg object-cover cursor-pointer" onclick="changeImage('https://placehold.co/800x800/D1D5DB/1F2937?text=Identity+Leggings')">
+                        <img src="https://placehold.co/150x150/E5E7EB/1F2937?text=Side" alt="Side view" class="thumbnail-image w-20 h-20 rounded-lg object-cover cursor-pointer" onclick="changeImage('https://placehold.co/800x800/D1D5DB/1F2937?text=Side+View')">
+                        <img src="https://placehold.co/150x150/E5E7EB/1F2937?text=Back" alt="Back view" class="thumbnail-image w-20 h-20 rounded-lg object-cover cursor-pointer" onclick="changeImage('https://placehold.co/800x800/D1D5DB/1F2937?text=Back+View')">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Info Section -->
+            <div class="lg:w-1/2 bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold mb-2">Identity Seamless Leggings</h1>
+                    <p class="text-2xl font-semibold text-gray-900 mb-4">$69.99</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Engineered for flexibility and comfort, the Identity Seamless Leggings are your perfect training partner. The seamless design prevents chafing and provides a second-skin feel, while the high-waisted fit offers support and style.
+                    </p>
+
+                    <!-- Color Selector -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Color</label>
+                        <div class="flex space-x-2">
+                            <button class="color-btn w-8 h-8 rounded-full bg-slate-500 border-2 active" data-color="slate" onclick="selectOption(this, 'color')"></button>
+                            <button class="color-btn w-8 h-8 rounded-full bg-blue-500 border-2" data-color="blue" onclick="selectOption(this, 'color')"></button>
+                            <button class="color-btn w-8 h-8 rounded-full bg-teal-500 border-2" data-color="teal" onclick="selectOption(this, 'color')"></button>
+                        </div>
+                    </div>
+
+                    <!-- Size Selector -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Size</label>
+                        <div class="flex space-x-2">
+                            <button class="size-btn px-4 py-2 rounded-full active" data-size="S" onclick="selectOption(this, 'size')">S</button>
+                            <button class="size-btn px-4 py-2 rounded-full" data-size="M" onclick="selectOption(this, 'size')">M</button>
+                            <button class="size-btn px-4 py-2 rounded-full" data-size="L" onclick="selectOption(this, 'size')">L</button>
+                            <button class="size-btn px-4 py-2 rounded-full" data-size="XL" onclick="selectOption(this, 'size')">XL</button>
+                        </div>
+                    </div>
+
+                    <!-- Quantity Selector -->
+                    <div class="mb-6">
+                        <label for="quantity" class="block text-sm font-medium text-gray-700 mb-2">Quantity</label>
+                        <input type="number" id="quantity" value="1" min="1" class="w-24 p-2 border rounded-lg text-center focus:outline-none focus:ring-2 focus:ring-blue-300">
+                    </div>
+                </div>
+
+                <!-- Add to Cart Button -->
+                <button onclick="addToCart()" class="w-full btn-primary font-bold py-3 px-6 rounded-full shadow-lg transform hover:scale-105">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+        
+        <!-- Related Products Section -->
+        <section class="mt-12 md:mt-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">You Might Also Like</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Related Product Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center">
+                    <img src="https://placehold.co/600x600/F3F4F6/1F2937?text=Sports+Bra" alt="Sports Bra" class="w-full h-64 object-cover">
+                    <div class="p-4 text-center flex-grow flex flex-col justify-between w-full">
+                        <h3 class="text-lg font-semibold mb-1">Seamless Sports Bra</h3>
+                        <p class="text-gray-600 mb-4">$39.99</p>
+                        <a href="#" class="btn-primary">View Product</a>
+                    </div>
+                </div>
+                <!-- Related Product Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center">
+                    <img src="https://placehold.co/600x600/F3F4F6/1F2937?text=Top" alt="Crop Top" class="w-full h-64 object-cover">
+                    <div class="p-4 text-center flex-grow flex flex-col justify-between w-full">
+                        <h3 class="text-lg font-semibold mb-1">Crossover Crop Top</h3>
+                        <p class="text-gray-600 mb-4">$34.99</p>
+                        <a href="#" class="btn-primary">View Product</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8 mt-12">
+        <div class="container mx-auto px-4 md:px-8 text-center">
+            <p>&copy; 2024 The Iron Gear. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Function to change the main image based on thumbnail click
+        function changeImage(newSrc) {
+            document.getElementById('main-image').src = newSrc;
+        }
+
+        // Function to handle active state for size and color buttons
+        function selectOption(button, type) {
+            const container = button.closest('div');
+            const buttons = container.querySelectorAll(`.${type}-btn`);
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        }
+
+        // Placeholder function for the "Add to Cart" button
+        function addToCart() {
+            const size = document.querySelector('.size-btn.active')?.dataset.size;
+            const color = document.querySelector('.color-btn.active')?.dataset.color;
+            const quantity = document.getElementById('quantity').value;
+            if (size && color && quantity) {
+                console.log(`Added a size ${size}, color ${color}, Identity Seamless Leggings with a quantity of ${quantity} to the cart.`);
+            } else {
+                console.log("Please select a size and color before adding to cart.");
+            }
+        }
+    </script>
+</body>
+</html>

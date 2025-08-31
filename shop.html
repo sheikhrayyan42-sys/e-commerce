@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Arrivals - The Iron Gear</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* Lighter background */
+        }
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navigation Bar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900">The Iron Gear</a>
+            <nav class="flex space-x-4">
+                <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Shop</a>
+                <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">About</a>
+                <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Contact</a>
+                <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Cart</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content - Product Listing -->
+    <main class="container mx-auto p-4 md:p-8 mt-4">
+        <h1 class="text-4xl md:text-5xl font-bold text-center my-8">New Arrivals</h1>
+        <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+            Explore our latest collection of high-performance gear and apparel designed to help you crush your goals.
+        </p>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+            <!-- Product Card 1 -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                <a href="#">
+                    <img src="https://placehold.co/600x600/F3F4F6/1F2937?text=Product+1" alt="Heavy Duty Kettlebell" class="w-full h-64 object-cover">
+                </a>
+                <div class="p-4 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-1">Heavy Duty Kettlebell</h3>
+                        <p class="text-gray-600 mb-2">$59.99</p>
+                    </div>
+                    <button onclick="addToCart('Heavy Duty Kettlebell')" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-full transition duration-300 shadow-md">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                <a href="#">
+                    <img src="https://placehold.co/600x600/F3F4F6/1F2937?text=Product+2" alt="Gym Bag" class="w-full h-64 object-cover">
+                </a>
+                <div class="p-4 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-1">Durable Gym Bag</h3>
+                        <p class="text-gray-600 mb-2">$45.00</p>
+                    </div>
+                    <button onclick="addToCart('Durable Gym Bag')" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-full transition duration-300 shadow-md">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                <a href="#">
+                    <img src="https://placehold.co/600x600/F3F4F6/1F2937?text=Product+3" alt="Performance T-shirt" class="w-full h-64 object-cover">
+                </a>
+                <div class="p-4 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-1">Performance T-shirt</h3>
+                        <p class="text-gray-600 mb-2">$29.50</p>
+                    </div>
+                    <button onclick="addToCart('Performance T-shirt')" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-full transition duration-300 shadow-md">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                <a href="#">
+                    <img src="https://placehold.co/600x600/F3F4F6/1F2937?text=Product+4" alt="Ergonomic Jump Rope" class="w-full h-64 object-cover">
+                </a>
+                <div class="p-4 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-1">Ergonomic Jump Rope</h3>
+                        <p class="text-gray-600 mb-2">$18.99</p>
+                    </div>
+                    <button onclick="addToCart('Ergonomic Jump Rope')" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-full transition duration-300 shadow-md">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                <a href="#">
+                    <img src="https://placehold.co/600x600/F3F4F6/1F2937?text=Product+5" alt="Resistance Bands Set" class="w-full h-64 object-cover">
+                </a>
+                <div class="p-4 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-1">Resistance Bands Set</h3>
+                        <p class="text-gray-600 mb-2">$24.99</p>
+                    </div>
+                    <button onclick="addToCart('Resistance Bands Set')" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-full transition duration-300 shadow-md">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                <a href="#">
+                    <img src="https://placehold.co/600x600/F3F4F6/1F2937?text=Product+6" alt="Weighted Vest" class="w-full h-64 object-cover">
+                </a>
+                <div class="p-4 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-1">Adjustable Weighted Vest</h3>
+                        <p class="text-gray-600 mb-2">$89.99</p>
+                    </div>
+                    <button onclick="addToCart('Adjustable Weighted Vest')" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-full transition duration-300 shadow-md">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8 mt-12">
+        <div class="container mx-auto px-4 md:px-8 text-center">
+            <p>&copy; 2024 The Iron Gear. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple placeholder JavaScript to simulate adding a product to the cart
+        function addToCart(productName) {
+            console.log(`Added "${productName}" to the cart.`);
+            // In a real application, this would update a shopping cart state or API
+            // For this example, we just log to the console.
+        }
+    </script>
+
+</body>
+</html>

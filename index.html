@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Iron Gear</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Using the Inter font for a modern look */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Hero Section -->
+    <header class="relative bg-black h-[60vh] md:h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-out transform"
+             style="background-image: url('https://placehold.co/1920x1080/4B5563/FFFFFF?text=Unleash+Your+Power');">
+        </div>
+        <div class="relative z-10 text-center text-white p-4">
+            <h1 class="text-4xl md:text-7xl font-bold tracking-tight mb-4 animate-fade-in-up">Unleash Your Power</h1>
+            <p class="text-lg md:text-xl font-light mb-8">
+                Your journey to a stronger self starts here.
+            </p>
+            <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
+                Shop the Collection
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <!-- Featured Categories Section -->
+        <section class="my-12 md:my-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Shop by Category</h2>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Category Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 overflow-hidden">
+                    <a href="#">
+                        <img src="https://placehold.co/600x400/D1D5DB/1F2937?text=Apparel" alt="Apparel" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-4 text-center">
+                            <h3 class="text-lg font-semibold">Apparel</h3>
+                        </div>
+                    </a>
+                </div>
+                <!-- Category Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 overflow-hidden">
+                    <a href="#">
+                        <img src="https://placehold.co/600x400/D1D5DB/1F2937?text=Weights" alt="Weights" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-4 text-center">
+                            <h3 class="text-lg font-semibold">Weights</h3>
+                        </div>
+                    </a>
+                </div>
+                <!-- Category Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 overflow-hidden">
+                    <a href="#">
+                        <img src="https://placehold.co/600x400/D1D5DB/1F2937?text=Cardio" alt="Cardio" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-4 text-center">
+                            <h3 class="text-lg font-semibold">Cardio</h3>
+                        </div>
+                    </a>
+                </div>
+                <!-- Category Card 4 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 overflow-hidden">
+                    <a href="#">
+                        <img src="https://placehold.co/600x400/D1D5DB/1F2937?text=Accessories" alt="Accessories" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-4 text-center">
+                            <h3 class="text-lg font-semibold">Accessories</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Sellers Section -->
+        <section class="my-12 md:my-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Best Sellers</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center">
+                    <img src="https://placehold.co/600x600/F3F4F6/1F2937?text=Product+1" alt="Product 1" class="w-full h-64 object-cover">
+                    <div class="p-4 text-center flex-grow flex flex-col justify-between w-full">
+                        <h3 class="text-lg font-semibold mb-1">Heavy Duty Resistance Bands</h3>
+                        <p class="text-gray-600 mb-4">$29.99</p>
+                        <a href="#" class="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300">
+                            Add to Cart
+                        </a>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center">
+                    <img src="https://placehold.co/600x600/F3F4F6/1F2937?text=Product+2" alt="Product 2" class="w-full h-64 object-cover">
+                    <div class="p-4 text-center flex-grow flex flex-col justify-between w-full">
+                        <h3 class="text-lg font-semibold mb-1">Adjustable Dumbbell Set</h3>
+                        <p class="text-gray-600 mb-4">$199.99</p>
+                        <a href="#" class="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300">
+                            Add to Cart
+                        </a>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center">
+                    <img src="https://placehold.co/600x600/F3F4F6/1F2937?text=Product+3" alt="Product 3" class="w-full h-64 object-cover">
+                    <div class="p-4 text-center flex-grow flex flex-col justify-between w-full">
+                        <h3 class="text-lg font-semibold mb-1">Gym Shark Water Bottle</h3>
+                        <p class="text-gray-600 mb-4">$15.50</p>
+                        <a href="#" class="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300">
+                            Add to Cart
+                        </a>
+                    </div>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center">
+                    <img src="https://placehold.co/600x600/F3F4F6/1F2937?text=Product+4" alt="Product 4" class="w-full h-64 object-cover">
+                    <div class="p-4 text-center flex-grow flex flex-col justify-between w-full">
+                        <h3 class="text-lg font-semibold mb-1">Foam Roller</h3>
+                        <p class="text-gray-600 mb-4">$35.00</p>
+                        <a href="#" class="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300">
+                            Add to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="my-12 md:my-16 bg-gray-100 rounded-xl p-8 shadow-inner">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <p class="text-gray-600 italic mb-4">"The quality of the gear is top-notch. It's truly a game changer for my workouts!"</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/50x50/374151/FFFFFF?text=J" alt="John Doe" class="rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold">Jane Doe</p>
+                            <p class="text-sm text-gray-500">Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <p class="text-gray-600 italic mb-4">"Shipping was fast and the customer service was fantastic. I'll definitely be buying from here again."</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/50x50/374151/FFFFFF?text=A" alt="Alex Smith" class="rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold">Alex Smith</p>
+                            <p class="text-sm text-gray-500">Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <p class="text-gray-600 italic mb-4">"I'm so impressed with the quality and design of my new gear. It's exactly what I needed."</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/50x50/374151/FFFFFF?text=M" alt="Maria Garcia" class="rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold">Maria Garcia</p>
+                            <p class="text-sm text-gray-500">Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="my-12 md:my-16 bg-indigo-600 text-white rounded-xl p-8 md:p-12 text-center shadow-lg">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Stay Up-to-Date</h2>
+            <p class="mb-6 font-light">Join our community and get exclusive deals, new product alerts, and training tips delivered to your inbox.</p>
+            <div class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4">
+                <input type="email" placeholder="Enter your email address" class="flex-grow p-3 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-300 transition duration-300">
+                <button class="bg-white text-indigo-600 font-semibold py-3 px-8 rounded-full hover:bg-gray-200 transition duration-300 transform hover:scale-105">
+                    Subscribe
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8">
+        <div class="container mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="mb-4 md:mb-0">
+                <h3 class="text-xl font-bold text-white mb-2">The Iron Gear</h3>
+                <p>&copy; 2024. All rights reserved.</p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-6 md:gap-12">
+                <div class="flex flex-col items-center md:items-start">
+                    <h4 class="text-lg font-semibold text-white mb-2">Shop</h4>
+                    <a href="#" class="hover:text-white transition duration-200 mb-1">Weights</a>
+                    <a href="#" class="hover:text-white transition duration-200 mb-1">Apparel</a>
+                    <a href="#" class="hover:text-white transition duration-200">Accessories</a>
+                </div>
+                <div class="flex flex-col items-center md:items-start">
+                    <h4 class="text-lg font-semibold text-white mb-2">Support</h4>
+                    <a href="#" class="hover:text-white transition duration-200 mb-1">FAQs</a>
+                    <a href="#" class="hover:text-white transition duration-200 mb-1">Contact Us</a>
+                    <a href="#" class="hover:text-white transition duration-200">Returns</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

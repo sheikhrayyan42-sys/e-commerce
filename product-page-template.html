@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overcharged Tee - The Iron Gear</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900">The Iron Gear</a>
+            <nav class="flex space-x-4">
+                <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Shop</a>
+                <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">About</a>
+                <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Contact</a>
+                <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Cart</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content - Product Details -->
+    <main class="container mx-auto p-4 md:p-8 mt-4">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Product Images Section -->
+            <div class="lg:w-1/2">
+                <div class="bg-white rounded-xl shadow-lg p-4">
+                    <!-- Main Product Image -->
+                    <img id="main-image" src="https://placehold.co/800x800/D1D5DB/1F2937?text=Overcharged+Tee" alt="Overcharged Tee" class="w-full h-auto object-cover rounded-lg mb-4 shadow-md">
+                    
+                    <!-- Thumbnail Gallery -->
+                    <div class="flex space-x-2 overflow-x-auto">
+                        <img src="https://placehold.co/150x150/E5E7EB/1F2937?text=Front" alt="Front view" class="thumbnail-image w-20 h-20 rounded-lg object-cover cursor-pointer hover:border-2 hover:border-indigo-600 transition" onclick="changeImage('https://placehold.co/800x800/D1D5DB/1F2937?text=Overcharged+Tee')">
+                        <img src="https://placehold.co/150x150/E5E7EB/1F2937?text=Side" alt="Side view" class="thumbnail-image w-20 h-20 rounded-lg object-cover cursor-pointer hover:border-2 hover:border-indigo-600 transition" onclick="changeImage('https://placehold.co/800x800/D1D5DB/1F2937?text=Side+View')">
+                        <img src="https://placehold.co/150x150/E5E7EB/1F2937?text=Back" alt="Back view" class="thumbnail-image w-20 h-20 rounded-lg object-cover cursor-pointer hover:border-2 hover:border-indigo-600 transition" onclick="changeImage('https://placehold.co/800x800/D1D5DB/1F2937?text=Back+View')">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Info Section -->
+            <div class="lg:w-1/2 bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold mb-2">Overcharged Tee</h1>
+                    <p class="text-2xl font-semibold text-gray-900 mb-4">$34.99</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        The Overcharged Tee is engineered for peak performance. Made from a moisture-wicking fabric blend, it keeps you cool and dry during the most intense workouts. The athletic fit provides a sleek look without restricting your movement.
+                    </p>
+
+                    <!-- Size Selector -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Size</label>
+                        <div class="flex space-x-2">
+                            <button class="size-btn px-4 py-2 border rounded-full border-gray-300 hover:bg-gray-200 transition-colors">S</button>
+                            <button class="size-btn px-4 py-2 border rounded-full border-gray-300 hover:bg-gray-200 transition-colors">M</button>
+                            <button class="size-btn px-4 py-2 border rounded-full border-gray-300 hover:bg-gray-200 transition-colors">L</button>
+                            <button class="size-btn px-4 py-2 border rounded-full border-gray-300 hover:bg-gray-200 transition-colors">XL</button>
+                        </div>
+                    </div>
+
+                    <!-- Quantity Selector -->
+                    <div class="mb-6">
+                        <label for="quantity" class="block text-sm font-medium text-gray-700 mb-2">Quantity</label>
+                        <input type="number" id="quantity" value="1" min="1" class="w-24 p-2 border rounded-lg text-center focus:outline-none focus:ring-2 focus:ring-indigo-300">
+                    </div>
+                </div>
+
+                <!-- Add to Cart Button -->
+                <button onclick="addToCart()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 shadow-lg transform hover:scale-105">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Additional Product Information Section -->
+        <section class="mt-12">
+            <h2 class="text-3xl font-bold mb-4 text-center">More Details</h2>
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <ul class="list-disc list-inside space-y-2 text-gray-600">
+                    <li>Material: 95% Polyester, 5% Spandex</li>
+                    <li>Moisture-wicking and quick-drying technology</li>
+                    <li>Designed for a full range of motion</li>
+                    <li>Machine washable</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Related Products Section -->
+        <section class="mt-12 md:mt-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">You Might Also Like</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Related Product Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center">
+                    <img src="https://placehold.co/600x600/F3F4F6/1F2937?text=Related+1" alt="Related Product 1" class="w-full h-64 object-cover">
+                    <div class="p-4 text-center flex-grow flex flex-col justify-between w-full">
+                        <h3 class="text-lg font-semibold mb-1">Workout Shorts</h3>
+                        <p class="text-gray-600 mb-4">$45.00</p>
+                        <a href="#" class="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300">View Product</a>
+                    </div>
+                </div>
+                <!-- Related Product Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center">
+                    <img src="https://placehold.co/600x600/F3F4F6/1F2937?text=Related+2" alt="Related Product 2" class="w-full h-64 object-cover">
+                    <div class="p-4 text-center flex-grow flex flex-col justify-between w-full">
+                        <h3 class="text-lg font-semibold mb-1">Compression Leggings</h3>
+                        <p class="text-gray-600 mb-4">$79.99</p>
+                        <a href="#" class="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300">View Product</a>
+                    </div>
+                </div>
+                <!-- Related Product Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center">
+                    <img src="https://placehold.co/600x600/F3F4F6/1F2937?text=Related+3" alt="Related Product 3" class="w-full h-64 object-cover">
+                    <div class="p-4 text-center flex-grow flex flex-col justify-between w-full">
+                        <h3 class="text-lg font-semibold mb-1">Adjustable Dumbbells</h3>
+                        <p class="text-gray-600 mb-4">$199.99</p>
+                        <a href="#" class="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300">View Product</a>
+                    </div>
+                </div>
+                <!-- Related Product Card 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center">
+                    <img src="https://placehold.co/600x600/F3F4F6/1F2937?text=Related+4" alt="Related Product 4" class="w-full h-64 object-cover">
+                    <div class="p-4 text-center flex-grow flex flex-col justify-between w-full">
+                        <h3 class="text-lg font-semibold mb-1">Gym Bag</h3>
+                        <p class="text-gray-600 mb-4">$55.00</p>
+                        <a href="#" class="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300">View Product</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8 mt-12">
+        <div class="container mx-auto px-4 md:px-8 text-center">
+            <p>&copy; 2024 The Iron Gear. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Placeholder function to change the main image based on thumbnail click
+        function changeImage(newSrc) {
+            document.getElementById('main-image').src = newSrc;
+        }
+
+        // Placeholder function for the "Add to Cart" button
+        function addToCart() {
+            const size = document.querySelector('.size-btn.bg-indigo-600')?.textContent;
+            const quantity = document.getElementById('quantity').value;
+            console.log(`Added a size ${size} Overcharged Tee with a quantity of ${quantity} to the cart.`);
+            // In a real application, this would send data to a shopping cart system.
+        }
+
+        // Add active state to size buttons
+        document.querySelectorAll('.size-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all size buttons
+                document.querySelectorAll('.size-btn').forEach(btn => btn.classList.remove('bg-indigo-600', 'text-white'));
+                // Add active class to the clicked button
+                button.classList.add('bg-indigo-600', 'text-white');
+            });
+        });
+
+    </script>
+</body>
+</html>
